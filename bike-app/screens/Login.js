@@ -2,6 +2,7 @@ import React, { useRef }  from "react";
 import { View, Animated, Text, Image, TextInput,ImageBackground, TouchableOpacity,StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
+
 export default function Login(params) {
   const navigation = params.navigation;
   return (
@@ -16,40 +17,12 @@ export default function Login(params) {
     >
       <Text style={{ fontSize: 20, color: "grey" }}>WELCOME TO</Text>
       <Text style={{ fontSize: 20, fontWeight: "bold" }}>SNEAKERS STORE</Text>
-    <ImageBackground source={require("./sneakerholic1.png")} resizeMode="cover" style={styles.image}>
+    <ImageBackground source={require("./pictures/sneakerholic 1.png")} resizeMode="cover" style={styles.image}>
       
     </ImageBackground>
       
       
       
-      {/* <View style={{}}>
-        <TextInput
-          style={{
-            padding: 15,
-            borderRadius: 10,
-            borderWidth: 0.7,
-            paddingHorizontal: 60,
-          }}
-          placeholder="Enter your username"
-        />
-      </View> */}
-      {/* <View style={{ marginTop: 10,}}>
-        <TextInput
-          secureTextEntry={true}
-          onChangeText={(
-            e
-          )=> {
-            console.log(e)
-          }}
-          style={{
-            padding: 15,
-            borderRadius: 10,
-            borderWidth: 0.7,
-            paddingHorizontal: 60,
-          }}
-          placeholder="Enter your password"
-        />
-      </View> */}
       <Text style={{ fontSize: 17,color: "#4c6ef5", fontWeight: "bold" }}>SHOES SPEAK LOUDER THAN WORDS</Text>
 
 
@@ -59,7 +32,7 @@ export default function Login(params) {
         }}
         style={{
           padding: 15,
-          paddingHorizontal: 80,
+          paddingHorizontal: 60,
           marginTop: 10,
           alignItems: "center",
           borderRadius: 10,
@@ -69,7 +42,7 @@ export default function Login(params) {
       >
         
       
-        <Text style={{paddingLeft: 6, color: "white" }}>JOIN US</Text>
+        <Text style={{paddingLeft: 0, color: "white" }}>JOIN US</Text>
       </TouchableOpacity>
 
       </View>
