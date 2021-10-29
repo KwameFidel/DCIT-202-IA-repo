@@ -1,65 +1,64 @@
-import React, { useRef }  from "react";
-import { View, Animated, Text, Image, TextInput,ImageBackground, TouchableOpacity,StyleSheet } from "react-native";
-import { AntDesign } from "@expo/vector-icons";
+import React from "react";
+import { View,Text , TouchableOpacity,Image} from "react-native";
+import { Ionicons, FontAwesome, AntDesign } from "@expo/vector-icons";
 
-
-export default function Login(params) {
-  const navigation = params.navigation;
+export default function Home(params) {
   return (
     <View
-      style={{ 
-        backgroundColor: "#a9e34b",
+      style={{
+        backgroundColor: "white",
         flex: 1,
+        paddingTop: 55,
         paddingHorizontal: 20,
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
-      <Text style={{ fontSize: 20, color: "grey" }}>WELCOME TO</Text>
-      <Text style={{ fontSize: 20, fontWeight: "bold" }}>SNEAKERS STORE</Text>
-    <ImageBackground source={require("./pictures/sneakerholic 1.png")} resizeMode="cover" style={styles.image}>
-      
-    </ImageBackground>
-      
-      
-      
-      <Text style={{ fontSize: 17,color: "#4c6ef5", fontWeight: "bold" }}>SHOES SPEAK LOUDER THAN WORDS</Text>
-
-
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate("Loginpage");
-        }}
+      <View
         style={{
-          padding: 15,
-          paddingHorizontal: 60,
-          marginTop: 10,
-          alignItems: "center",
-          borderRadius: 10,
           flexDirection: "row",
-          backgroundColor: "black",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
-        
-      
-        <Text style={{paddingLeft: 0, color: "white" }}>JOIN US</Text>
-      </TouchableOpacity>
-
+        <Ionicons name="ios-menu-outline" size={24} color="black" />
+        <View style={{ flexDirection: "row", justifyContent: "space-between"}}>
+          <AntDesign name="search1" size={20} color="black" />
+          <Ionicons name="notifications-outline" size={20} color="black" style={{marginLeft:15}} />
+        </View>
       </View>
+      <Text style={{fontSize:20, marginTop:15,marginBottom:10}}>
+     <Text style={{color:"rgb(196, 196, 196)"}}>The World's<Text style={{color:"orange",
+     fontWeight:"bolder"}}> Best Sneakers</Text></Text></Text>
+
+     <Text style={{fontWeight:"bolder"}}>Categories</Text> 
+
+     <View style={{  flexDirection:"row", justifyContent:"space-between",marginTop:10}}>
+      <View style={{backgroundColor:"black",borderRadius:20,padding:10,}}><TouchableOpacity><Text style={{textAlign:"center", color:"white"}} >All</Text></TouchableOpacity></View>
+     
+
+     <View style={{ backgroundColor:"rgb(250, 250, 250)",borderRadius:20,}}><TouchableOpacity><Text style={{padding:7,textAlign:"center",marginTop:5,color:"black"}}>FOR MEN</Text></TouchableOpacity></View>
+     
+    
+
+    <View style={{backgroundColor:"rgb(250, 250, 250)",borderRadius:20,}}><TouchableOpacity><Text style={{padding:7,textAlign:"center",marginTop:5,color:"black"}}>FOR WOMEN</Text></TouchableOpacity></View>
+
+    <View style={{backgroundColor:"rgb(250, 250, 250)",borderRadius:20,}}><TouchableOpacity><Text style={{padding:7,textAlign:"center", marginTop:5,color:"black"}}>FOR KIDS</Text></TouchableOpacity></View>
+     
+    
+    </View>
+    <View>
+      <View style={{backgroundColor:"rgb(250,250,250)",width:230, height:230, marginTop:15,padding:20,borderRadius:17}}>
+      <Image style={{height:150, width:150,}} source={require('./pictures/sneakerholic2.png')}/>
+      
+      </View>
+    
+
+
+    </View>
+    
+    
+    
+    
+    
+    </View>
   );
 }
-
-
-
-const styles = StyleSheet.create({
-  
-  image: {
-    flex: 0,
-    justifyContent: "space-evenly",
-    width:350,
-    height:450,
-  },
-  
-
- 
-});
