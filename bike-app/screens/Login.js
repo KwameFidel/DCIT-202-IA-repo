@@ -1,33 +1,27 @@
-import React from "react";
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import React, { useRef }  from "react";
+import { View, Animated, Text, Image, TextInput,ImageBackground, TouchableOpacity,StyleSheet } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function Login(params) {
   const navigation = params.navigation;
   return (
     <View
-      style={{
-        backgroundColor: "white",
+      style={{ 
+        backgroundColor: "#a9e34b",
         flex: 1,
         paddingHorizontal: 20,
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Image
-        style={{
-          transform: [{ rotate: "45deg" }],
-          borderRadius: 20,
-          marginBottom: 60,
-          width: 200,
-          height: 200,
-        }}
-        source={{
-          uri: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmlrZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
-        }}
-      />
-      <Text style={{ fontSize: 30, color: "grey" }}>Welcome to</Text>
-      <Text style={{ fontSize: 40, fontWeight: "bold" }}>Power Bike Shop</Text>
+      <Text style={{ fontSize: 20, color: "grey" }}>WELCOME TO</Text>
+      <Text style={{ fontSize: 20, fontWeight: "bold" }}>SNEAKERS STORE</Text>
+    <ImageBackground source={require("./sneakerholic1.png")} resizeMode="cover" style={styles.image}>
+      
+    </ImageBackground>
+      
+      
+      
       {/* <View style={{}}>
         <TextInput
           style={{
@@ -56,23 +50,7 @@ export default function Login(params) {
           placeholder="Enter your password"
         />
       </View> */}
-     <TouchableOpacity
-        onPress={() => {
-          navigation.navigate("Home");
-        }}
-        style={{
-          padding: 15,
-          paddingHorizontal: 80,
-          marginTop: 10,
-          alignItems: "center",
-          borderRadius: 10,
-          flexDirection: "row",
-          backgroundColor: "rgb(215, 216, 219)",
-        }}
-      >
-        <Image style={{height:24, width:24}} source={require('./goo.png')}/>
-        <Text style={{ paddingLeft: 10, color: "white" }}>Login With Google</Text>
-      </TouchableOpacity>
+      <Text style={{ fontSize: 17,color: "#4c6ef5", fontWeight: "bold" }}>SHOES SPEAK LOUDER THAN WORDS</Text>
 
 
       <TouchableOpacity
@@ -90,13 +68,25 @@ export default function Login(params) {
         }}
       >
         
-        <AntDesign name="apple1" size={24} color="white" />
-        <Text style={{ paddingLeft: 10, color: "white" }}>Login With Apple</Text>
+      
+        <Text style={{paddingLeft: 6, color: "white" }}>JOIN US</Text>
       </TouchableOpacity>
 
-      <View style={{paddingTop:15}}>
-      <Text>Not a Member?<Text style={{color:"orange", fontWeight:"bolder"}}> SignUp</Text></Text>
       </View>
-    </View>
   );
 }
+
+
+
+const styles = StyleSheet.create({
+  
+  image: {
+    flex: 0,
+    justifyContent: "space-evenly",
+    width:350,
+    height:450,
+  },
+  
+
+ 
+});
