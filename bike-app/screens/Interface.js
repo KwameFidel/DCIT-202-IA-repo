@@ -15,9 +15,12 @@ export default function Login(params) {
         alignItems: "center",
       }}
     >
+        
+        <Text style={{ color: '#080A50', fontFamily: 'sans-serif-medium',fontWeight:"bolder",fontSize:30,textAlign:"center", textShadowColor: '#000', textShadowOffset: { width: 0.7, height: 0.8 }, textShadowRadius: 4}}>SNEAKER<Text style={{color:"#f03e3e",fontSize:30}}>HOLIC</Text></Text>
+
       <Text style={{ fontSize: 20, color: "grey" }}>WELCOME TO</Text>
       <Text style={{ fontSize: 20, fontWeight: "bold" }}>SNEAKERS STORE</Text>
-    <ImageBackground source={require("./pictures/sneakerholic 1.png")} resizeMode="cover" style={styles.image}>
+    <ImageBackground source={require("./pictures/sneakerholic1.png")} resizeMode="cover" style={styles.image}>
       
     </ImageBackground>
       
@@ -28,7 +31,7 @@ export default function Login(params) {
 
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("Home");
+          navigation.navigate("StartScreen");
         }}
         style={{
           padding: 15,
