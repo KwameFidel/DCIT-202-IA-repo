@@ -82,7 +82,7 @@ export default function CartList(params) {
               textAlign: 'center',
               fontWeight: 'bolder',
             }}>
-            St Mawes Watch
+            Adidas sneakers
           </Text>
           <Text
             style={{
